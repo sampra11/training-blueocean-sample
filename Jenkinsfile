@@ -42,9 +42,9 @@ pipeline {
         sh './jenkins/deploy.sh dev'
       }
     }
-    stage('Deploy to Staging') {
+    stage('Deploy to production') {
       steps {
-        sh './jenkins/deploy.sh staging'
+        sh './jenkins/deploy.sh production'
         sh 'echo Notifying appropriate team members!'
       }
     }
